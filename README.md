@@ -1,49 +1,31 @@
-# Foodie — Recipe App (React Native / Expo)
+# Foodie — React Native Final Project
 
-Browse recipes by category, view full recipe details, favorite recipes, and manage your own
-recipes (add / edit / delete) — all in one Expo app.
+## Features mapped to the grading rubric
 
-## Tech
-- Expo SDK 51, React Native 0.74
-- React Navigation (native-stack)
-- Context API + AsyncStorage for state/persistence (favorites & user recipes survive app restarts)
-- expo-image-picker for uploading recipe photos
+1. Expo Snack can import this GitHub repository.
+2. The home feed has 12 horizontal category chips, including My Food.
+3. Recipe details show ingredients, instructions, preparation time, servings, calories, and difficulty.
+4. Selecting a category filters the feed.
+5. Heart buttons toggle favorite/unfavorite.
+6. Favorites screen displays saved recipes.
+7. My Food includes Add New Recipe.
+8. Add New Recipe accepts name, image upload, ingredients, instructions, and Save Recipe.
+9. Saved recipes appear in My Recipes.
+10. Opening a My Recipe shows complete details.
+11. My Recipes has functional Edit and Delete buttons.
+12. Header back buttons and Android hardware back are supported.
 
 ## Run locally
-```
+
+```bash
 npm install
 npx expo start
 ```
-Then scan the QR code with **Expo Go**, or press `w` for web.
 
-## Grading criteria → where to find it
-1. Standard Expo project, importable via Snack's "Import Git Repository".
-2. Main feed (`MainFeedScreen`) shows 11 horizontally scrollable categories + "My Food" (12 total).
-3. Tapping a recipe opens `RecipeDetailScreen`: ingredients, instructions, prep time, servings,
-   calories, difficulty.
-4. Tapping a category filters the feed to that category's recipes.
-5. Heart icon on every recipe card / detail page toggles favorite (❤️ / 🤍).
-6. Favorited recipes appear in the Favorites screen (heart icon in the main feed header).
-7. "My Food" tab in the category bar opens `MyRecipesScreen`, which includes "Add New Recipe".
-8. `AddEditRecipeScreen`: name, image upload, dynamic ingredients list, dynamic step-by-step
-   instructions, and a "Save Recipe" button.
-9. Newly saved recipes appear immediately in "My Recipes".
-10. Tapping a recipe in "My Recipes" opens the full detail page (name, image, ingredients,
-    instructions, etc).
-11. Each recipe in "My Recipes" has functional **Edit** and **Delete** buttons.
-12. Every inner screen has a working back button (custom back arrow or native header back).
+## Snack
 
-## Project structure
-```
-App.js
-src/
-  context/AppContext.js       — global state (favorites, user recipes) + AsyncStorage
-  data/recipesData.js         — 11 built-in categories, 22 seed recipes
-  components/RecipeCard.js
-  components/CategoryPill.js
-  screens/MainFeedScreen.js
-  screens/RecipeDetailScreen.js
-  screens/FavoritesScreen.js
-  screens/MyRecipesScreen.js
-  screens/AddEditRecipeScreen.js
-```
+Open Snack, choose Import from GitHub Repository, and paste your public repository URL.
+
+If Snack asks for packages, ensure these are installed:
+- expo-image-picker
+- @react-native-async-storage/async-storage
